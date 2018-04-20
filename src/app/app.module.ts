@@ -2,6 +2,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpModule} from '@angular/http';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
@@ -45,6 +46,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     MatAutocompleteModule,
     MatButtonModule,
     MatButtonToggleModule,
