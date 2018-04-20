@@ -5,8 +5,6 @@
 @import 'quill-editor.theme';
 @import 'sidenav.theme';
 @import '~@covalent/core/theming/all-theme';
-@import '../../app/pages/chat-page/chat-page.component.theme';
-@import '../../app/pages/pricing-tables-page/pricing-tables-page.component.theme';
 /************************************** MATERIAL BASIC STYLES **************************************/
 @include mat-core();
 
@@ -17,8 +15,6 @@
 @include all-colors($light-app-theme);
 @include side-item-theme($light-app-theme);
 @include typography-theme($light-app-theme);
-@include chat-page-theme($light-app-theme);
-@include pricing-tables-theme($light-app-theme);
 @include sidenav-theme($light-app-theme);
 
 /************************************** DARK THEME **************************************/
@@ -29,8 +25,6 @@
   @include all-colors($dark-app-theme);
   @include side-item-theme($dark-app-theme);
   @include typography-theme($dark-app-theme);
-  @include chat-page-theme($dark-app-theme);
-  @include pricing-tables-theme($dark-app-theme);
   //Style for editor added oly for dark theme, because default style already present are for light theme
   @include quill-editor-theme($dark-app-theme);
   @include sidenav-theme($dark-app-theme);
