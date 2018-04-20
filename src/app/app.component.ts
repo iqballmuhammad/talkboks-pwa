@@ -14,7 +14,7 @@ export class AppComponent {
 
   @HostBinding('class.loading') loading = true;
 
-  constructor(mdIconRegistry: MatIconRegistry, public router: Router, translateService: TranslateService) {
+  constructor(mdIconRegistry: MatIconRegistry, public router: Router) {
     mdIconRegistry.registerFontClassAlias('fontawesome', 'fa');
     this.router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {
@@ -23,11 +23,6 @@ export class AppComponent {
       }
     });
     this.loading = false;
-    // this language will be used as a fallback when a translation isn't found in the current language
-    translateService.setDefaultLang('en');
-
-    // the lang to use, if the lang isn't available, it will use the current loader to get them
-    translateService.use('en');
   }
 
 }
