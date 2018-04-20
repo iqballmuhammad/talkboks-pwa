@@ -1,0 +1,16 @@
+.card-type-second {
+    height: 20vh;
+    box-sizing: border-box;
+    background: url('/assets/cards-demo/notebook.jpg') no-repeat center;
+    background-size:100% auto;
+    /deep/ {
+      .mat-card-footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        padding: 10 50px 10px 10px;
+      }
+    }
+  }
