@@ -6,6 +6,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 
 import {AppComponent} from './app.component';
 import {RouterModule} from '@angular/router';
+import {PerfectScrollbarConfigInterface, PerfectScrollbarModule} from 'ngx-perfect-scrollbar';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {CustomFormsModule} from 'ng2-validation';
 import {
@@ -25,6 +26,7 @@ import {SidemenuModule} from './sidemenu/sidemenu.module';
 import {ResizeModule} from './resize/resize.module';
 import {AppRoutesModule} from './routes/app-routes.module';
 import {OverlayModule} from '@angular/cdk/overlay';
+
 import {
   MatAutocompleteModule, MatButtonModule, MatButtonToggleModule, MatCardModule, MatChipsModule, MatCheckboxModule, MatDialogModule, MatGridListModule,
   MatIconModule, MatInputModule, MatListModule, MatMenuModule, MatProgressBarModule, MatProgressSpinnerModule,
@@ -34,7 +36,6 @@ import {
 import {PortalModule} from '@angular/cdk/portal';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-
 
 @NgModule({
   declarations: [
