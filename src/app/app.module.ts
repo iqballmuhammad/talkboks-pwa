@@ -21,7 +21,7 @@ import {
 } from '@covalent/core';
 import {MainPageComponent} from './pages/main-page/main-page.component';
 import {TopicComponent} from './topic/topic.component';
-import {PostComponent} from './post/post.component';
+import {PostComponent} from './posts/post/post.component';
 import {SidemenuModule} from './sidemenu/sidemenu.module';
 import {ResizeModule} from './resize/resize.module';
 import {AppRoutesModule} from './routes/app-routes.module';
@@ -36,12 +36,17 @@ import {
 import {PortalModule} from '@angular/cdk/portal';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { PostService } from './posts/shared/post.service';
+import { PostListComponent } from './posts/post-list/post-list.component';
+import { TruncatePipe } from './truncate.pipe';
 
 @NgModule({
   declarations: [
     AppComponent, MainPageComponent,
     TopicComponent,
-    PostComponent
+    PostComponent,
+    PostListComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
@@ -91,7 +96,7 @@ import { environment } from '../environments/environment';
     AppRoutesModule,
     environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
   ],
-  providers: [],
+  providers: [PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
